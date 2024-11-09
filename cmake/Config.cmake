@@ -1,0 +1,8 @@
+macro(ddd_config config_name config_description default_value)
+	if("${${config_name}}" STREQUAL "")
+		set(${config_name} ${default_value})
+	endif()
+	separate_arguments(${config_name})
+	set(_val ${${config_name}})
+	message(STATUS "Config ${config_name} (${config_description}) is set to \"${_val}\"")
+endmacro()
