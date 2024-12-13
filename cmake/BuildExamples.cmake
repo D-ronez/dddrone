@@ -1,4 +1,4 @@
-ddd_config(DDD_BUILD_EXAMPLES "Build examples" "1")
+ddd_config(DDD_BUILD_EXAMPLES "1" STRING "Build examples")
 
 if(NOT "${DDD_BUILD_EXAMPLES}" STREQUAL "")
 	add_executable(Triangle examples/triangle.c)

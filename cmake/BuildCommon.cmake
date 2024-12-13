@@ -2,8 +2,9 @@
 add_library(${PROJECT_NAME}Common INTERFACE)
 include(Config)
 
-ddd_config(DDD_OPENGL_INCLUDE_DIRS "OpenGL include directories" "")
-ddd_config(DDD_OPENGL_SHARED_LIB_DIR "" "")
+ddd_config(DDD_OPENGL_INCLUDE_DIRS "" STRING "OpenGL include directories")
+ddd_config(DDD_OPENGL_SHARED_LIB_DIR "" STRING "Where to find OpenGL shared libraries")
+set(DDD_TEST "" CACHE STRING "")
 
 # Find OpenGL libraries
 find_library(GL GL PATHS ${DDD_OPEGL_SHARED_LIB_DIR} REQUIRED)
